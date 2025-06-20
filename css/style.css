@@ -194,11 +194,21 @@ h1 {
 
 .video-responsive {
     position: relative;
-    padding-bottom: 56.25%;
+    padding-bottom: 56.25%; 
     /* 16:9 ratio */
     padding-top: 25px;
     height: 0;
     overflow: hidden;
+}
+
+.video-responsive video,
+.video-responsive iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 90%;
+    display: block;
 }
 
 /* Road map */
@@ -319,6 +329,10 @@ h1 {
 
 #scrollUpBtn:hover {
     transform: translateY(-5px);
+    -webkit-transform: translateY(-5px);
+    -moz-transform: translateY(-5px);
+    -ms-transform: translateY(-5px);
+    -o-transform: translateY(-5px);
 }
 
 /* Large devices (≤1200px) */
@@ -380,6 +394,10 @@ h1 {
     .card p,
     #contact p {
         font-size: 16px;
+    }
+
+    .video-responsive {
+        padding-bottom: 60%; /* slightly taller for tablets */
     }
 
     #road-map {
@@ -451,6 +469,10 @@ h1 {
         font-size: 14px;
     }
 
+    .video-responsive {
+        padding-bottom: 70%; /* taller for small devices */
+    }
+
     #road-map {
         height: 40vh;
         min-height: 200px;
@@ -510,6 +532,10 @@ h1 {
     .card p,
     #contact p {
         font-size: 12px;
+    }
+
+    .video-responsive {
+        padding-bottom: 90%; /* taller for extra small devices */
     }
 
     #mind-map-container {
